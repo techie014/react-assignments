@@ -15,16 +15,38 @@ export default class ProductList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productDetails: data,
+      productList: data,
+      loading: false,
     };
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.filterText !== this.props.filterText) {
+      this.setLoaderStatus(true);
+    }
+
+    if (this.state.loading && !prevState.loading) {
+      this.updateProductList();
+    }
+  }
+
+  setLoaderStatus = loading => this.setState({ loading });
+
+  updateProductList = () => {
+    const { filterText } = this.props;
+    const productList = data.filter(product =>
+      product.name.toLowerCase().includes(filterText.toLowerCase())
+    );
+    console.log(productList);
+    this.setState({ productList, loading: false });
+  };
+
   renderProducts = () => {
-    const { productDetails } = this.state;
+    const { productList } = this.state;
     return (
       <ul className="product-list col-12">
-        {productDetails.products.map(productData => (
-          <li className="product-container col-12">
+        {productList.map(productData => (
+          <li key={productData.name} className="product-container col-12">
             <Product data={productData} />
           </li>
         ))}

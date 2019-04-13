@@ -19,12 +19,15 @@ export default class SearchBar extends Component {
     }
   }
 
-  onSearchTextChange = searchText => this.setState({ searchText });
+  onSearchTextChange = event =>
+    this.setState({ searchText: event.target.value });
 
   render() {
+    const { searchText } = this.state;
     return (
       <div className="search-bar">
         <input
+          value={searchText}
           placeholder="Search for products..."
           onChange={this.onSearchTextChange}
         />
