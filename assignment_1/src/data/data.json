@@ -1,48 +1,58 @@
-[{
+[
+  {
     "name": "Alpas",
     "type": "Web App",
     "caption": "Manage your team's works, projects and tasks online for free.",
-    "thumbnail": "assets/product-icon-blue.png"
-  }, {
+    "thumbnail": "assets/product-icon-blue.png",
+    "vote": 10
+  },
+  {
     "name": "Atom",
     "type": "Editor",
     "caption": "A hackable text editor for the 21st Century",
-    "thumbnail": "assets/product-icon-red.png"
+    "thumbnail": "assets/product-icon-red.png",
+    "vote": 15
   },
   {
     "name": "Docket",
     "type": "Web App",
     "caption": "Tinder for grocery list",
-    "thumbnail": "assets/product-icon-green.png"
+    "thumbnail": "assets/product-icon-green.png",
+    "vote": 8
   },
   {
     "name": "Narrative",
     "type": "Freelance",
     "caption": "A content network where the members rule and are rewarded",
-    "thumbnail": "assets/product-icon-purple.png"
+    "thumbnail": "assets/product-icon-purple.png",
+    "vote": 5
   },
   {
     "name": "Visual Studio Code",
     "type": "Editor",
     "caption": "Cross-platform & free robust code editor from Microsoft",
-    "thumbnail": "assets/product-icon-red.png"
+    "thumbnail": "assets/product-icon-red.png",
+    "vote": 2
   },
   {
     "name": "Slack",
     "type": "Communication",
     "caption": "Be less busy. Real-time messaging, archiving & search.",
-    "thumbnail": "assets/product-icon-blue.png"
+    "thumbnail": "assets/product-icon-blue.png",
+    "vote": 19
   },
   {
     "name": "Skype",
     "type": "Communication",
     "caption": "Skype for desktop",
-    "thumbnail": "assets/product-icon-purple.png"
+    "thumbnail": "assets/product-icon-purple.png",
+    "vote": 25
   },
   {
     "name": "Youtube TV",
     "type": "Android App",
     "caption": "Youtube takes on the cable tv provider",
-    "thumbnail": "assets/product-icon-green.png"
+    "thumbnail": "assets/product-icon-green.png",
+    "vote": 0
   }
 ]

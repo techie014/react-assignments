@@ -16,37 +16,33 @@ export default class ProductList extends Component {
     super(props);
     this.state = {
       productList: data,
-      loading: false,
     };
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.filterText !== this.props.filterText) {
-      this.setLoaderStatus(true);
+  productComparator = (product1, product2) => {
+    if (product1.vote < product2.vote) {
+      return 1;
     }
-
-    if (this.state.loading && !prevState.loading) {
-      this.updateProductList();
+    if (product1.vote > product2.vote) {
+      return -1;
     }
-  }
-
-  setLoaderStatus = loading => this.setState({ loading });
-
-  updateProductList = () => {
-    const { filterText } = this.props;
-    const productList = data.filter(product =>
-      product.name.toLowerCase().includes(filterText.toLowerCase())
-    );
-    this.setState({ productList, loading: false });
+    return 0;
   };
 
   renderProducts = () => {
     const { productList } = this.state;
+    const { filterText } = this.props;
 
-    if (productList.length) {
+    const filteredProductList = productList
+      .filter(product =>
+        product.name.toLowerCase().includes(filterText.toLowerCase())
+      )
+      .sort(this.productComparator);
+
+    if (filteredProductList.length) {
       return (
         <ul className="product-list col-12">
-          {productList.map(productData => (
+          {filteredProductList.map(productData => (
             <li key={productData.name} className="product-container col-12">
               <Product data={productData} />
             </li>

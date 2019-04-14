@@ -90,6 +90,32 @@ body {
           }
         }
 
+        .product-vote {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .vote {
+            border: 1px solid $text-color;
+            width: 60px;
+            height: 60px;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &:hover:not(:active) {
+              border-color: $focus;
+            }
+
+            &:active {
+              background-color: $text-color;
+              color: $black;
+            }
+          }
+        }
+
         &:hover {
           background-color: $light-black;
         }
