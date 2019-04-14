@@ -37,20 +37,27 @@ export default class ProductList extends Component {
     const productList = data.filter(product =>
       product.name.toLowerCase().includes(filterText.toLowerCase())
     );
-    console.log(productList);
     this.setState({ productList, loading: false });
   };
 
   renderProducts = () => {
     const { productList } = this.state;
+
+    if (productList.length) {
+      return (
+        <ul className="product-list col-12">
+          {productList.map(productData => (
+            <li key={productData.name} className="product-container col-12">
+              <Product data={productData} />
+            </li>
+          ))}
+        </ul>
+      );
+    }
     return (
-      <ul className="product-list col-12">
-        {productList.map(productData => (
-          <li key={productData.name} className="product-container col-12">
-            <Product data={productData} />
-          </li>
-        ))}
-      </ul>
+      <div className="not-found">
+        <span>{'Sorry, nothing matched your search'}</span>
+      </div>
     );
   };
 

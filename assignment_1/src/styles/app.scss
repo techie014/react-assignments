@@ -40,6 +40,7 @@ body {
     height: 100%;
     list-style-type: none;
     padding: 0;
+    margin-bottom: 0px;
 
     .product-container {
       height: 120px;
@@ -95,4 +96,11 @@ body {
       }
     }
   }
+}
+
+.not-found {
+  color: $text-color;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
 }
