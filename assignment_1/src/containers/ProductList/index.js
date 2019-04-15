@@ -29,6 +29,19 @@ export default class ProductList extends Component {
     return 0;
   };
 
+  onProductUpVote = id => {
+    this.setState(prevState => {
+      const { productList: prevProductList } = prevState;
+      prevProductList.forEach(product => {
+        if (product.id === id) {
+          product.vote++;
+        }
+      });
+
+      return { productList: prevProductList };
+    });
+  };
+
   renderProducts = () => {
     const { productList } = this.state;
     const { filterText } = this.props;
@@ -43,8 +56,8 @@ export default class ProductList extends Component {
       return (
         <ul className="product-list col-12">
           {filteredProductList.map(productData => (
-            <li key={productData.name} className="product-container col-12">
-              <Product data={productData} />
+            <li key={productData.id} className="product-container col-12">
+              <Product data={productData} onUpVote={this.onProductUpVote} />
             </li>
           ))}
         </ul>

@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Alpas",
     "type": "Web App",
     "caption": "Manage your team's works, projects and tasks online for free.",
@@ -7,6 +8,7 @@
     "vote": 10
   },
   {
+    "id": 2,
     "name": "Atom",
     "type": "Editor",
     "caption": "A hackable text editor for the 21st Century",
@@ -14,6 +16,7 @@
     "vote": 15
   },
   {
+    "id": 3,
     "name": "Docket",
     "type": "Web App",
     "caption": "Tinder for grocery list",
@@ -21,6 +24,7 @@
     "vote": 8
   },
   {
+    "id": 4,
     "name": "Narrative",
     "type": "Freelance",
     "caption": "A content network where the members rule and are rewarded",
@@ -28,6 +32,7 @@
     "vote": 5
   },
   {
+    "id": 5,
     "name": "Visual Studio Code",
     "type": "Editor",
     "caption": "Cross-platform & free robust code editor from Microsoft",
@@ -35,6 +40,7 @@
     "vote": 2
   },
   {
+    "id": 6,
     "name": "Slack",
     "type": "Communication",
     "caption": "Be less busy. Real-time messaging, archiving & search.",
@@ -42,6 +48,7 @@
     "vote": 19
   },
   {
+    "id": 7,
     "name": "Skype",
     "type": "Communication",
     "caption": "Skype for desktop",
@@ -49,6 +56,7 @@
     "vote": 25
   },
   {
+    "id": 8,
     "name": "Youtube TV",
     "type": "Android App",
     "caption": "Youtube takes on the cable tv provider",
